@@ -27,6 +27,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            max-width: 90%;
         }
 
         .title, .footer {
@@ -44,16 +45,19 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .input-area, .output-area {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
 
         textarea {
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
             height: 100px;
             padding: 10px;
             border-radius: 5px;
@@ -77,6 +81,23 @@
         button:hover {
             background-color: #0056b3;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .textarea-container {
+                flex-direction: column;
+            }
+
+            textarea {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -88,11 +109,9 @@
                 <textarea id="inputText" placeholder="Masukkan teks di sini..." oninput="modifyText()"></textarea>
             </div>
             <div class="output-area">
-               
                 <textarea id="outputText" placeholder="Hasil akan muncul di sini..." readonly></textarea>
             </div>
-             <button onclick="copyText()">Salin</button>
-             
+            <button onclick="copyText()">Salin</button>
         </div>
 
         <div class="footer">made by fufufufu</div>
