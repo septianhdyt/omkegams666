@@ -69,13 +69,12 @@
             border: 1px solid #ccc;
             resize: none;
             font-size: 16px;
-            background: linear-gradient(to right, #87cefa, #b0e0e6);
             backdrop-filter: blur(5px);
             box-sizing: border-box;
         }
 
         textarea[readonly] {
-            background: linear-gradient(to right, #87cefa, #b0e0e6);
+            background: linear-gradient(to right, #87cefa, #b0e0e6); /* Gradient biru langit hanya pada textarea hasil */
         }
 
         button {
@@ -118,7 +117,7 @@
         
         <div class="textarea-container">
             <div class="input-area">
-                <textarea id="" placeholder="Masukkan teks di sini..." oninput="modifyText()"></textarea>
+                <textarea id="inputText" placeholder="Masukkan teks di sini..." oninput="modifyText()"></textarea>
             </div>
             <div class="output-area">
                 <textarea id="outputText" placeholder="Hasil akan muncul di sini..." readonly></textarea>
