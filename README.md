@@ -1,3 +1,4 @@
+// MANA KASUR SPREI YANG KAU JANJIKAN ITU HAH
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +90,7 @@
             </div>
             <div class="output-area">
                
-                <textarea id="outputText" placeholder="Hasil akan muncul di sini..." readonly></textarea>
+                <textarea id="outputText" placeholder="Omke gams teks akan muncul di sini..." readonly></textarea>
             </div>
              <button onclick="copyText()">Salin</button>
              
@@ -102,13 +103,13 @@
         function modifyText() {
             let inputText = document.getElementById('inputText').value;
             
-            // Hilangkan huruf ganda yang berurutan
+            
             let outputText = inputText.replace(/([a-zA-Z])\1+/g, '$1');
 
-            // Menyisipkan huruf "m" setelah vokal diikuti oleh konsonan
+            
             outputText = outputText.replace(/([aeiou])(\w)/gi, '$1m$2');
 
-            // Mengganti huruf "p" atau "b" dengan "v"
+            
             outputText = outputText.replace(/[pb]/gi, 'v');
 
             document.getElementById('outputText').value = outputText;
@@ -118,7 +119,7 @@
             const outputText = document.getElementById('outputText');
             outputText.select();
             document.execCommand('copy');
-            alert('Teks hasil berhasil disalin!');
+            alert('Teks omke gams berhasil disalin!');
         }
     </script>
 </body>
